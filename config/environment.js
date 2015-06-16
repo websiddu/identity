@@ -5,6 +5,12 @@ module.exports = function(environment) {
     modulePrefix: 'identity-front',
     environment: environment,
     baseURL: '/',
+    contentSecurityPolicy: {
+      'font-src': "'self' data: fonts.gstatic.com",
+      'style-src': "'self' 'unsafe-inline' fonts.googleapis.com",
+      'img-src': "'slef' *",
+      'connect-src': 'localhost:2403'
+    },
     locationType: 'auto',
     EmberENV: {
       FEATURES: {

@@ -1,0 +1,15 @@
+<div id="fullscreen_bg" class="fullscreen_bg"></div>
+<div class="container">
+  <form class="form-signin" {{action 'login' on="submit"}}>
+    <h1 class="form-signin-heading text-muted">Identity</h1>
+    {{input value=username type="text" class="form-control" placeholder="Username" required='true' autofocus=""}}
+    {{input value=password type="password" class="form-control" placeholder="Password" required='true'}}
+    <button class="btn btn-lg btn-primary btn-block" type="submit">
+      Sign In
+    </button>
+  </form>
+  {{#if errorMessage}}
+    <div class="alert alert-danger text-center">{{errorMessage}}</div>
+  {{/if}}
+</div>
+{{outlet}}
