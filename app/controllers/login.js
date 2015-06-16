@@ -19,6 +19,8 @@ var LoginController = Ember.Controller.extend({
           data: data,
           success: function(data) {
             self.set('token', data.uid);
+            localStorage['token'] = data.uid;
+            self.transitionToRoute('index')
           },
           error: function(error) {
             self.set('errorMessage', JSON.parse(error.responseText).message);
