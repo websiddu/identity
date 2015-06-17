@@ -1,6 +1,4 @@
-import Ember from 'ember';
-
-var LoginController = Ember.Controller.extend({
+export default Ember.Controller.extend({
   user: [],
   actions: {
     reset: function() {
@@ -30,5 +28,3 @@ var LoginController = Ember.Controller.extend({
     }
   }
 });
-
-export default LoginController;;

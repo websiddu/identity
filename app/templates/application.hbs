@@ -12,4 +12,25 @@
   </div>
 </nav>
 
-{{outlet}}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2">
+      <ul class="side-menu">
+        <li>
+          {{#link-to 'index'}}Dashboard{{/link-to}}
+        </li>
+        <li>
+          {{#link-to 'settings'}}Settings{{/link-to}}
+        </li>
+        <li>
+          {{#link-to 'profile'}}Profile{{/link-to}}
+        </li>
+      </ul>
+    </div>
+    <div class="col-lg-9">
+      {{outlet}}
+    </div>
+  </div>
+</div>
+
+
